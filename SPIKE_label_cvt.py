@@ -10,7 +10,7 @@ for file in ['Spike_0068.bboxes.tsv']:
     print(file)
     tsv_path = os.path.join(tsv_dir, file)
     bboxes = np.loadtxt(tsv_path, np.float32)# [left,top,right,bottom]
-     
+    
     img_path = tsv_path.replace('bboxes.tsv','jpg').replace('tsv', 'images')
     img = cv2.imread(img_path)
     h, w, _ = img.shape
